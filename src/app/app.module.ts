@@ -11,12 +11,16 @@ import { HomeComponent } from './components/home/home.component';
 import { ROOT_REDUCERS } from './state/app.state';
 import { PhotosEffects } from './state/effects/photos.effects';
 import { TestComponent } from './components/test-ngrx/test.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { ShoppingCarComponent } from './components/shopping-car/shopping-car.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TestComponent
+    TestComponent,
+    NavBarComponent,
+    ShoppingCarComponent
   ],
   imports: [
     BrowserModule,
