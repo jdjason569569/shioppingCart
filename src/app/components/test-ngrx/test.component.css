@@ -1,15 +1,9 @@
-.container{
+.container {
   display: flex;
-  flex-direction: column;
-}
-
-.elements-container{
-  display: flex;
-  justify-content: space-around;
-}
-
-img{
-  width: 100%;
+  flex-direction: row;
+  background-color: aqua;
+  width: 600px;
+  height: 100px;
 }
 
 

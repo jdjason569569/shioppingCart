@@ -1,6 +1,6 @@
 import { Photo } from "./photo.model.interface";
 
-export interface ItemState{
+export interface PhotoState{
   loading: boolean,
   photos: Photo[]
 }

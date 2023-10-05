@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Drink } from 'src/app/models/drink.model.interface';
+import { DrinksService } from 'src/app/services/drinks.service';
 
 
 
@@ -10,14 +12,15 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent implements OnInit{
 
-  loading$ : Observable<boolean> = new Observable();
-  photos$ : Observable<any> = new Observable();
 
-  constructor(){
+  drinks$ : Observable<any> = new Observable();
+
+  constructor(private drinksService: DrinksService){
 
   }
 
   ngOnInit(): void {
+    this.drinks$ =  this.drinksService.getDrinks();
 
   }
 

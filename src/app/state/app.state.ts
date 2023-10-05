@@ -1,9 +1,9 @@
 import { ActionReducerMap } from "@ngrx/store";
-import { ItemState } from "../models/photos.state";
+import { PhotoState } from "../models/photos.state";
 import { photosReducer } from "./reducers/photos.reducers";
 
 export interface AppState{
-  photos: ItemState;
+  photos: PhotoState;
 }
 
 export const ROOT_REDUCERS:ActionReducerMap<AppState> = {

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {  map } from 'rxjs/operators';
+import { Photo } from '../models/photo.model.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +10,6 @@ export class PhotosService {
   constructor(private http: HttpClient) { }
 
   getPhotos(){
-    return this.http.get("https://jsonplaceholder.typicode.com/photos/2").pipe(map(value =>{
-      return [value]
-    }));
+    return this.http.get("https://jsonplaceholder.typicode.com/photos/");
   }
 }

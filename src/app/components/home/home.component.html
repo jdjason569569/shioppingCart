@@ -1,3 +1,10 @@
 <app-nav-bar></app-nav-bar>
-
-
+<div class="image-container">
+  <ng-container *ngFor="let drink of drinks$ | async">
+    <img class="image" src="{{ drink.strDrinkThumb }}" />
+    <div class="btn-container">
+      <button class="btn">Agregar</button>
+      <button class="btn">Eliminar</button>
+    </div>
+  </ng-container>
+</div>
