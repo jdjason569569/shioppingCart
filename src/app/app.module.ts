@@ -13,6 +13,7 @@ import { PhotosEffects } from './state/effects/photos.effects';
 import { TestComponent } from './components/test-ngrx/test.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ShoppingCarComponent } from './components/shopping-car/shopping-car.component';
+import { DrinksEffects } from './state/effects/drinks.effects';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { ShoppingCarComponent } from './components/shopping-car/shopping-car.com
     HttpClientModule,
     StoreModule.forRoot(ROOT_REDUCERS),
     StoreDevtoolsModule.instrument({ name:"TEST",maxAge: 25, logOnly: !isDevMode() }),
-    EffectsModule.forRoot([PhotosEffects])
+    EffectsModule.forRoot([PhotosEffects, DrinksEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]

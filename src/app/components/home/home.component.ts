@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Drink } from 'src/app/models/drink.model.interface';
-import { DrinksService } from 'src/app/services/drinks.service';
+import { loadDrinks } from 'src/app/state/actions/drink.actions';
+import { AppState } from 'src/app/state/app.state';
+import { selectListDrinks } from 'src/app/state/selectors/drink.selector';
 
 
 
@@ -15,13 +17,12 @@ export class HomeComponent implements OnInit{
 
   drinks$ : Observable<any> = new Observable();
 
-  constructor(private drinksService: DrinksService){
-
+  constructor(private store: Store<AppState>){
+    this.drinks$ = this.store.select(selectListDrinks);
   }
 
   ngOnInit(): void {
-    this.drinks$ =  this.drinksService.getDrinks();
-
+   this.store.dispatch(loadDrinks());
   }
 
 }
