@@ -1,6 +1,12 @@
 <!-- Create the navbar structure -->
 <div class="navbar">
-  <a routerLink="/shopping">Go shopping</a>
+  <div class="cart">
+    <p>Cantidad de elementos del carrito: {{ cart$ | async }}</p>
+  </div>
+  <div class="style-link">
+    <a routerLink="/shopping">Go shopping</a>
+  </div>
+
 </div>
 
 

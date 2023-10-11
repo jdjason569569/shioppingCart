@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { Drink } from 'src/app/models/drink.model.interface';
 import { loadDrinks } from 'src/app/state/actions/drink.actions';
+import { addDrink, deleteDrink } from 'src/app/state/actions/shoppingCart.actions';
 import { AppState } from 'src/app/state/app.state';
 import { selectListDrinks } from 'src/app/state/selectors/drink.selector';
 
@@ -23,6 +25,14 @@ export class HomeComponent implements OnInit{
 
   ngOnInit(): void {
    this.store.dispatch(loadDrinks());
+  }
+
+  addDDrink(drink: Drink){
+    this.store.dispatch(addDrink({drink}));
+  }
+
+  deleteDrink(idDrink: number){
+    this.store.dispatch(deleteDrink({idDrink}));
   }
 
 }
