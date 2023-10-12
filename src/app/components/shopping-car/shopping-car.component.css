@@ -1,0 +1,33 @@
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.image {
+  width: 15% ;
+  height: auto ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  border: 2px solid gray;
+}
+
+.btn-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.btn{
+  border: 2px solid gray;
+  font-size: 10px;
+  margin: 2px;
+}
+
+.btn:hover{
+  background-color: gray;
+  color:aliceblue
+
+}

@@ -8,14 +8,12 @@ import { selectcountCart } from 'src/app/state/selectors/shoppingCart.selector';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  styleUrls: ['./nav-bar.component.css'],
 })
 export class NavBarComponent {
-
-  cart$ : Observable<any> = new Observable();
+  cart$: Observable<any> = new Observable();
 
   constructor(private store: Store<AppState>) {
     this.cart$ = this.store.select(selectcountCart);
   }
-
 }

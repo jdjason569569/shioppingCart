@@ -1,1 +1,8 @@
-<p>shopping-car works!</p>
+<div class="image-container">
+  <ng-container *ngFor="let drink of drinks$ | async">
+    <img class="image" src="{{ drink.strDrinkThumb }}" />
+    <div class="btn-container">
+      <button class="btn" (click)="deleteDrink(drink.idDrink)">Eliminar</button>
+    </div>
+  </ng-container>
+</div>

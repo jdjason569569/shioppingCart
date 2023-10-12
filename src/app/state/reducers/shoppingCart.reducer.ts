@@ -13,7 +13,7 @@ export const shoppingCartReducer = createReducer(
     return { ...state, drinks: updatedDrinks };
   }),
   on(deleteDrink, (state, { idDrink }) => {
-    const drinks = state.drinks.filter(item => item.idDrink !== idDrink);
+    const drinks = state.drinks.filter((item) => item.idDrink !== idDrink);
     return { ...state, drinks: drinks };
   })
 );

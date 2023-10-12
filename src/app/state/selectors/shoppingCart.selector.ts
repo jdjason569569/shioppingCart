@@ -11,3 +11,10 @@ export const selectcountCart = createSelector(
     return state.drinks.length;
   }
 );
+
+export const showDrinksSelected = createSelector(
+  selectDrinksFeature,
+  (state: ShoppingCartState) => {
+    return state.drinks;
+  }
+);

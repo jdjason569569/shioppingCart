@@ -5,13 +5,13 @@
   align-items: center;
 }
 
-.cart p{
+.cart p {
   font-size: 16px;
-  color: white ;
+  color: white;
   padding: 14px 20px;
 }
 
-.style-link a{
+.style-link a {
   font-size: 16px;
   color: white;
   text-align: center;
@@ -25,5 +25,3 @@
   border-radius: 2%;
   font-weight: bolder;
 }
-
-

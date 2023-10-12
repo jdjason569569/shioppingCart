@@ -12,4 +12,8 @@ export const deleteDrink = createAction(
   props<{idDrink: number}>()
 )
 
+export const showDrinks = createAction(
+  '[ShoppingCart show] show drinks'
+)
+
 
